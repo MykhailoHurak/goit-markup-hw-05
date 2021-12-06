@@ -512,9 +512,6 @@ ul {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--color-accent);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social {
@@ -587,7 +584,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-headline);
-  transition-property: background-color;
+  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -710,6 +707,7 @@ ul {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 1000ms, visibility 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -762,4 +760,7 @@ ul {
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transform: translate(-50%, -50%);
+  transition: transform 500ms;
 }
